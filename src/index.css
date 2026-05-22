@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Crimson Pro', serif;
+  --color-royal-950: #0a0608;
+  --color-royal-900: #140c10;
+  --color-royal-800: #241418;
+  --color-royal-700: #3a2228;
+  --color-royal-gold: #c9a227;
+  --color-royal-gold-dim: #8a6f1a;
+  --color-royal-crimson: #8b1a2b;
+  --color-royal-parchment: #e8dcc4;
+}
+
+html,
+body,
+#root {
+  min-height: 100dvh;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-royal-950);
+  color: var(--color-royal-parchment);
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.gold-glow {
+  box-shadow: 0 0 40px rgba(201, 162, 39, 0.25);
+}
+
+.card-royal {
+  background: linear-gradient(145deg, var(--color-royal-800), var(--color-royal-900));
+  border: 1px solid rgba(201, 162, 39, 0.35);
+}
