@@ -12,17 +12,18 @@ Set these in **Project → Settings → Environment Variables** (Production + Pr
 
 Redeploy after adding variables.
 
-## Custom domain DNS (scayn.in)
+## Custom domain DNS (scayn.in on Cloudflare)
 
-At your DNS provider for **scayn.in**, add:
+`scayn.in` uses **Cloudflare** nameservers. In Cloudflare → DNS → Records, add:
 
-| Type | Name | Value |
-|------|------|--------|
-| **CNAME** | `bloodline` | `cname.vercel-dns.com` |
+| Type | Name | Target | Proxy |
+|------|------|--------|-------|
+| **CNAME** | `bloodline` | `cname.vercel-dns.com` | DNS only (grey cloud) recommended |
+| **CNAME** | `dynasty` | `cname.vercel-dns.com` | DNS only (grey cloud) recommended |
 
-In Vercel: **Project → Settings → Domains → Add** `bloodline.scayn.in`
+Both domains are already attached to the Vercel project `dynasty-game`. DNS may take a few minutes to propagate.
 
-Optional alias: add `dynasty.scayn.in` the same way (second CNAME `dynasty` → `cname.vercel-dns.com`).
+**Live now (no DNS wait):** https://dynasty-game.vercel.app
 
 ## URLs after deploy
 
